@@ -1,0 +1,10 @@
+<h1>Voici les livres que nous avons en bibliothèque :</h1>
+<ul>
+  <% @books.each do |book| %>
+  <li>
+    <h2><%= book.title %></h2>
+    <%= link_to "voir les détails", book_path(book) %>
+  </li>
+  <% end %>
+</ul>
+<%= link_to "Ajouter un livre", new_book_path %>
