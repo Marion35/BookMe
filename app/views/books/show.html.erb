@@ -1,3 +1,8 @@
 <h1><%= @book.title %></h1>
 <p>Auteur du livre : <%= @book.author %></p>
 <p>Description du livre : <%= @book.description %></p>
+<%= link_to "Delete",
+    books_path(@book),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+<%= link_to "Modifier", edit_book_path(@book) %>
