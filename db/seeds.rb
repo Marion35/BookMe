@@ -38,19 +38,19 @@ book5 = Book.create!(title: "Vertiges", author: "Robin Cook", description: "Roma
 puts "images"
 
 file = URI.open("https://res.cloudinary.com/dvi5k6nur/image/upload/v1703010137/la_fille_du_train_aqfrsp.jpg")
-book1.photo.attach(io: file, filename: "la_fille_du_train_aqfrsp", content_type: "image/jpg")
+book1.photo.attach(io: file, filename: "la-fille-du-train", content_type: "image/jpg")
 book1.save
 file = URI.open("https://res.cloudinary.com/dvi5k6nur/image/upload/v1703010137/Ast%C3%A9rix_et_ob%C3%A9lix_tkxxk0.jpg")
-book2.photo.attach(io: file, filename: "Astérix_et_obélix_tkxxk0", content_type: "image/jpg")
+book2.photo.attach(io: file, filename: "Astérix-et-obélix", content_type: "image/jpg")
 book2.save
 file = URI.open("https://res.cloudinary.com/dvi5k6nur/image/upload/v1703010137/recueil_de_poemes_uyy80b.jpg")
-book3.photo.attach(io: file, filename: "recueil_de_poemes_uyy80b", content_type: "image/jpg")
+book3.photo.attach(io: file, filename: "recueil-poeme", content_type: "image/jpg")
 book3.save
 file = URI.open("https://res.cloudinary.com/dvi5k6nur/image/upload/v1703010137/Le-Choeur-des-femmes_v4ocae.jpg")
-book4.photo.attach(io: file, filename: "Le-Choeur-des-femmes_v4ocae", content_type: "image/jpg")
+book4.photo.attach(io: file, filename: "Le-Choeur-des-femmes", content_type: "image/jpg")
 book4.save
 file = URI.open("https://res.cloudinary.com/dvi5k6nur/image/upload/v1703010137/vertiges-93611-264-432_qrrjok.jpg")
-book5.photo.attach(io: file, filename: "vertiges-93611-264-432_qrrjok", content_type: "image/jpg")
+book5.photo.attach(io: file, filename: "vertiges", content_type: "image/jpg")
 book5.save
 
 puts "done"

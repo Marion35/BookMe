@@ -1,6 +1,7 @@
 <h1><%= @book.title %></h1>
 <p>Auteur du livre : <%= @book.author %></p>
 <p>Description du livre : <%= @book.description %></p>
+<p><%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %></p>
 <%= link_to "Delete",
     books_path(@book),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}

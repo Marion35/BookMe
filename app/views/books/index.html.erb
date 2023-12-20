@@ -1,14 +1,12 @@
 <h1>Voici les livres que nous avons en bibliothèque :</h1>
 <ul>
   <% @books.each do |book| %>
-  <li>
-    <% raise %>
-    <% book.photo.each do |photo| %>
-      <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-       <h2><%= book.title %></h2>
+    <li>
+      <%= cl_image_tag book.photo.key, height: 300, width: 400, crop: :fill %>
+      <p><%= book.title %></p>
       <%= link_to "voir les détails", book_path(book) %>
-  </li>
+    </li>
   <% end %>
 </ul>
 <%= link_to "Ajouter un livre", new_book_path %>
+
