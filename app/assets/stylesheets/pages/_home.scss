@@ -1,1 +1,30 @@
 // Specific CSS for your home-page
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #853A3A; /* couleur de fond */
+  color: white; /* couleur du texte */
+  border: 1px solid #853A3A; /* bordure */
+  border-radius: 10px; /* coins arrondis */
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #702c2c; /* changement de couleur au survol */
+  color: white;
+}
+
+html {
+  height: 100%;
+}

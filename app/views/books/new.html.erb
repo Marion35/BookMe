@@ -1,16 +1,24 @@
-<h1>Nouveau livre</h1>
-<%# <%= form_with model: @book do |f| %>
-<%# <%= f.label :title %>
-<%# <%= f.text_field :title %>
-<%# <%= f.label :author %>
-<%# <%= f.text_field :author %>
-<%# <%= f.label :description %>
-<%# <%= f.text_field :description %>
-<%# <%= f.submit %>
-<%# <% end %>
-<%= simple_form_for(@book) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :author %>
-  <%= f.input :description %>
-  <%= f.submit %>
+<div class="container">
+  <h1>Merci pour ta participation à l'édifice de BookMe &#x1F604;</h1>
+  <%# <%= form_with model: @book do |f| %>
+  <%# <%= f.label :title %>
+  <%# <%= f.text_field :title %>
+  <%# <%= f.label :author %>
+  <%# <%= f.text_field :author %>
+  <%# <%= f.label :description %>
+  <%# <%= f.text_field :description %>
+  <%# <%= f.submit %>
+  <%# <% end %>
+<%= form_with model: @book do |f| %>
+  <%= f.label :title, "Quel est le titre de ton livre ?" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :author, "Qui est l'auteur de ton livre ?" %>
+  <%= f.text_field :author %>
+
+  <%= f.label :description, "Donnes aux lecteurs une rapide description de ton livre (sans spoil bine sûr \u{1F604})" %>
+  <%= f.text_field :description %>
+
+  <%= f.submit "Enregistrer", class: "button" %>
 <% end %>
+</div>

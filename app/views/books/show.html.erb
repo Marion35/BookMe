@@ -1,9 +1,16 @@
-<h1><%= @book.title %></h1>
-<p>Auteur du livre : <%= @book.author %></p>
-<p>Description du livre : <%= @book.description %></p>
-<p><%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %></p>
-<%= link_to "Delete",
-    books_path(@book),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-<%= link_to "Modifier", edit_book_path(@book) %>
+<div class="container">
+  <h1><%= @book.title %></h1>
+  <p>Auteur du livre : <%= @book.author %></p>
+  <p>Description du livre : <%= @book.description %></p>
+  <% if @book.photo.present? %>
+    <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy0ZTmzf0Lt21OSCfwXgzenELYc9OvSsbOWw&usqp=CAU" alt="Image par défaut" class="mb-3">
+  <% end %>
+  <%= link_to "Supprimer",
+      book_path(@book),
+      class: "button",
+      data: {turbo_method: :delete, turbo_confirm: "Es-tu sûr?"}
+    %>
+  <%= link_to "Modifier", edit_book_path(@book), class: "button m-3" %>
+</div>

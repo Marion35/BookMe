@@ -1,9 +1,13 @@
-<%= form_with model: @book do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :author %>
-  <%= f.text_field :author %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.submit %>
+<div class="container m-3">
+  <% if @book.photo.present? %>
+    <%= cl_image_tag @book.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy0ZTmzf0Lt21OSCfwXgzenELYc9OvSsbOWw&usqp=CAU" alt="Image par défaut" class="mb-3">
+  <% end %>
+  <%= simple_form_for(@book) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :author %>
+  <%= f.input :description %>
+  <%= f.submit "Enregistrer", class: "button" %>
 <% end %>
+</div>

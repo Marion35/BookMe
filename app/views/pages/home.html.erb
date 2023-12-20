@@ -1,4 +1,7 @@
-<h1>Bonjour, bienvenue sur BookMe !</h1>
-<h2>Que veux-tu faire aujourd'hui ?</h2>
-<%= link_to "Ajouter un livre", new_book_path %>
-<%= link_to "Accéder aux livres", books_path %>
+<div class="container">
+  <h1>Bonjour, bienvenue sur BookMe !</h1>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy0ZTmzf0Lt21OSCfwXgzenELYc9OvSsbOWw&usqp=CAU" alt="Image livre">
+  <h2>Que veux-tu faire aujourd'hui ?</h2>
+  <%= link_to "Ajouter un livre", new_book_path, class: "button m-3" %>
+  <%= link_to "Accéder aux livres", books_path, class: "button m-1" %>
+</div>

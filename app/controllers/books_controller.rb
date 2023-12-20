@@ -31,8 +31,9 @@ class BooksController < ApplicationController
 
   def destroy
     @book = Book.find(params[:id])
+    # @book.user = current_user
     @book.destroy
-    redirect_to book_path(@book), status: :see_other
+    redirect_to books_path(@book), status: :see_other
   end
 
 
